@@ -63,3 +63,4 @@ INNER JOIN `series` ON `books`.`chapter` = `series`.`id`;';
 $pdo = connectToDB('booksDB');
 
 $books = fetchAllbooksData($pdo);
+
