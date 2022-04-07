@@ -1,7 +1,7 @@
 <?php
 require_once '../function.php';
-class Test extends \PHPUnit\Framework\TestCase
 
+class Test extends \PHPUnit\Framework\TestCase
 {
     public function testGivenStringThrowError()
     {
@@ -37,4 +37,5 @@ class Test extends \PHPUnit\Framework\TestCase
 
         $this->assertEquals($expected, $result);
     }
+    
 }
