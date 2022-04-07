@@ -2,7 +2,6 @@
 require_once '../function.php';
 
 class Test extends \PHPUnit\Framework\TestCase
-
 {
     public function testGivenStringThrowError()
     {

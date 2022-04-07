@@ -13,7 +13,7 @@ img.splashs {
 
 h1 {
     text-align: center;
-    border: 0.3rem solid red;
+    border: 0.3rem solid #FF0000;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -45,7 +45,7 @@ div.splash {
 
 h2.ftitle {
     text-align: center;
-    border: 0.3rem solid red;
+    border: 0.3rem solid #FF0000;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -138,7 +138,7 @@ select {
     input {
         width: 100%;
         margin: 0.5rem 0;
-        border: 0.1rem solid #ccc;
+        border: 0.1rem solid #CCC;
         border-radius: 0.2rem;
     }
 
