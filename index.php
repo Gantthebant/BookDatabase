@@ -1,5 +1,5 @@
 <?php
-require_once 'connect.php';
+require_once 'db.php';
 require_once 'function.php';
 
 if (isset($_POST['create'])) {
