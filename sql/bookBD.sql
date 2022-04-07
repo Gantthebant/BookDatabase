@@ -1,3 +1,5 @@
+//Database name is - booksDB
+
 DROP TABLE IF EXISTS `authors`;
 
 CREATE TABLE `authors` (
