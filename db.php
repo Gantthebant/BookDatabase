@@ -54,10 +54,52 @@ function fetchAll(PDO $dbConnection, string $sql, array $params = null): array
 function fetchAllbooksData(PDO $dbConnection): array
 {
     $sql = 'SELECT `auther`, `title`, `chapter`, `description`, `image`, `authors`.`name` AS `auther`, `series`.`name` AS `chapter`
-FROM `books`
-INNER JOIN `authors` ON `books`.`auther` = `authors`.`id`
-INNER JOIN `series` ON `books`.`chapter` = `series`.`id`;';
+            FROM `books`
+            INNER JOIN `authors` ON `books`.`auther` = `authors`.`id`
+            INNER JOIN `series` ON `books`.`chapter` = `series`.`id`;';
     return fetchAll($dbConnection, $sql);
+}
+
+function addNewBook(PDO $pdo, array $formdata)
+{
+    $query = $pdo->prepare(
+        "INSERT INTO `books` (`auther`, `title`, `chapter`, `description`, `image`)
+                VALUES (:auther, :title, :chapter, :description, :image);"
+    );
+
+    $auther = $formdata['auther'];
+    $title = $formdata['title'];
+    $chapter = $formdata['chapter'];
+    $description = $formdata['description'];
+    $image = $formdata['image'];
+
+    $query->execute([
+        'auther' => $auther,
+        'title' => $title,
+        'chapter' => $chapter,
+        'description' => $description,
+        'image' => $image,
+    ]);
+}
+
+function fetchauthers(PDO $pdo): array
+{
+    $sql =
+        'SELECT `authors`.`id`, `authors`.`name`' .
+        ' FROM `authors` ' .
+        ' ORDER BY `authors`.`name`;';
+
+    return fetchAll($pdo, $sql);
+}
+
+function fetchseries(PDO $pdo): array
+{
+    $sql =
+        'SELECT `series`.`id`, `series`.`name`' .
+        ' FROM `series` ' .
+        ' ORDER BY `series`.`name`;';
+
+    return fetchAll($pdo, $sql);
 }
 
 $pdo = connectToDB('booksDB');
