@@ -3,8 +3,6 @@ require_once '../function.php';
 class Test extends \PHPUnit\Framework\TestCase
 
 {
-
-
     public function testGivenStringThrowError()
     {
         $book = 'A Book';
@@ -13,7 +11,6 @@ class Test extends \PHPUnit\Framework\TestCase
 
         $result = getbooks($book);
     }
-
 
     public function testGivenEmptyArrayReturnEmptyString()
     {
@@ -24,10 +21,8 @@ class Test extends \PHPUnit\Framework\TestCase
         $this->assertEquals('', $result);
     }
 
-
     public function testGivenValidBookReturn()
     {
-
         $records[] = array
         (
             'id' => 1,
@@ -42,7 +37,4 @@ class Test extends \PHPUnit\Framework\TestCase
 
         $this->assertEquals($expected, $result);
     }
-
 }
-
-
