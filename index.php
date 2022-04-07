@@ -15,10 +15,10 @@ require_once 'function.php';
 <body>
 <h1>BOOK COLLECTION</h1>
 <div class="splash">
-<img src="images/splash.jpg" alt="Picture shelf of books" class="splashs">
+    <img src="images/splash.jpg" alt="Picture shelf of books" class="splashs">
 </div>
 <div class="container">
-<?php getbooks($books);?>
+    <?php getbooks($books); ?>
 </div>
 </body>
 </html>
