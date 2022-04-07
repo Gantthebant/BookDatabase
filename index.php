@@ -28,8 +28,8 @@ if (isset($_POST['create'])) {
 <html lang="en">
 
 <head>
-    <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Collection</title>
@@ -37,9 +37,11 @@ if (isset($_POST['create'])) {
 
 <body>
 <h1>BOOK COLLECTION</h1>
+<div class="splash">
+<img src="images/splash.jpg" alt="Picture shelf of books" class="splashs">
+</div>
 <div class="container">
 <?php getbooks($books);?>
 </div>
-
 </body>
 </html>
