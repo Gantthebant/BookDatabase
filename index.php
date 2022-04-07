@@ -28,6 +28,8 @@ if (isset($_POST['create'])) {
 <html lang="en">
 
 <head>
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Collection</title>

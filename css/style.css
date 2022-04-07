@@ -1,0 +1,30 @@
+div.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3rem;
+}
+
+div.content {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    text-align: center;
+}
+
+
+@media only screen and (min-width: 600px) {
+
+    div.container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        gap: 3rem;
+    }
+
+    div.content {
+        display: flex;
+        flex-direction: column;
+        max-width: 35%;
+    }
+}
