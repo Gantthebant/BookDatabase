@@ -1,9 +1,10 @@
 <?php
 
-function getbooks(array $books)
+function getbooks(array $books): string
 {
+    $bookstr ='';
     foreach ($books as $book) {
-        echo '<div class="content">'
+        $bookstr .= '<div class="content">'
             . '<img src=' . $book["image"] . ' class="cover" alt="' . $book["title"] . ' books cover">'
                 .'<div class="text">'
                 . '<h2>' . $book["auther"] . '</h2>'
@@ -15,4 +16,6 @@ function getbooks(array $books)
                 . '</div>'
             . '</div>';
     }
+
+    return $bookstr;
 }

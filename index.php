@@ -23,7 +23,7 @@ $series = fetchseries($pdo);
     <img src="images/splash.jpg" alt="Picture shelf of books" class="splashs">
 </div>
 <div class="container">
-    <?php getbooks($books); ?>
+    <?php echo getbooks($books); ?>
 </div>
 <h2 class="ftitle">NEW BOOK</h2>
 <div class="form">
